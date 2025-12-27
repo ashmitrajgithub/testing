@@ -1,32 +1,45 @@
-import { callLogs } from "@/lib/mock-data"
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableHeader,
+    TableRow,
+  } from "@/components/ui/table"
+  import { callLogs } from "@/lib/mock-data"
+  import { Badge } from "@/components/ui/badge"
 
-export default function CallsPage() {
-  return (
-    <div className="space-y-4">
-      <h1 className="text-xl font-bold">Call Logs</h1>
+  export default function CallsPage() {
+    return (
+      <div className="w-full">
+        <h1 className="text-xl font-bold mb-4">Call Logs</h1>
 
-      <div className="bg-white rounded-xl shadow overflow-x-auto">
-        <table className="w-full text-sm">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="p-3">Name</th>
-              <th className="p-3">City</th>
-              <th className="p-3">Category</th>
-              <th className="p-3">Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            {callLogs.map((c) => (
-              <tr key={c.id} className="border-t">
-                <td className="p-3">{c.name}</td>
-                <td className="p-3">{c.city}</td>
-                <td className="p-3">{c.category}</td>
-                <td className="p-3">{c.time}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="rounded-md border bg-white">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>User Name</TableHead>
+                <TableHead>City</TableHead>
+                <TableHead>Category</TableHead>
+                <TableHead>Time</TableHead>
+                <TableHead>Status</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {callLogs.map((log) => (
+                <TableRow key={log.id}>
+                  <TableCell className="font-medium">{log.name}</TableCell>
+                  <TableCell>{log.city}</TableCell>
+                  <TableCell>{log.category}</TableCell>
+                  <TableCell>{log.time}</TableCell>
+                  <TableCell>
+                    <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">Completed</Badge>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }

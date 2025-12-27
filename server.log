@@ -1,0 +1,19 @@
+
+> my-v0-project@0.1.0 dev
+> next dev
+
+   ▲ Next.js 16.0.10 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://192.168.0.2:3000
+
+ ✓ Starting...
+ ✓ Ready in 726ms
+ ○ Compiling /admin ...
+ GET /admin 200 in 7.9s (compile: 7.0s, render: 907ms)
+ GET /avatars/shadcn.jpg 404 in 885ms (compile: 748ms, render: 137ms)
+ GET /admin 200 in 292ms (compile: 13ms, render: 279ms)
+ GET /avatars/shadcn.jpg 404 in 77ms (compile: 8ms, render: 69ms)
+ GET /admin/users/workers 200 in 1038ms (compile: 701ms, render: 337ms)
+ GET /avatars/shadcn.jpg 404 in 54ms (compile: 12ms, render: 43ms)
+ GET /admin/verification 200 in 885ms (compile: 578ms, render: 308ms)
+ GET /avatars/shadcn.jpg 404 in 61ms (compile: 19ms, render: 42ms)
